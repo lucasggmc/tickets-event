@@ -11,7 +11,7 @@ Run `npm install`
 
 Run `ng serve` or just `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-##Comments to the reviewer
+## Comments to the reviewer
 
 I used between three and four hours.
 
@@ -26,8 +26,13 @@ for the possible locations to make the end user experience better <br>
 4 - Handle the errors and Create a Toaster to show the messages <br>
 5 - Clear all filters <br>
 6 - add a loader to let the user know what is happening <br>
-7 - I now it's a requirement, but I could not write unit tests with the given  time <br>
+7 - I now it's a requirement, but I could not write unit tests with the given  time <be>
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Screenshot from 2024-07-16 20-44-35](https://github.com/user-attachments/assets/4981c594-046c-4821-9192-6a75dd45dd20) <br>
+
+![Screenshot from 2024-07-16 20-47-03](https://github.com/user-attachments/assets/04b5136f-74e0-4c6e-9d91-79dfc6441427) <br>
+
+![Screenshot from 2024-07-16 20-46-04](https://github.com/user-attachments/assets/dc9b6de7-59b5-4b90-b622-45032e1b71e6) <br>
+
+
