@@ -1,0 +1,13 @@
+<div class="card-container">
+    <div class="image-wrapper">
+        <img [src]="getImage()" src="event image"/>
+    </div>
+    <div class="card-content">
+        <p class="title">{{event.name}}</p>
+        <div class="card-tags">
+            <span class="info-tag">{{getLocale()}}</span>
+        <span class="info-tag">{{getDate()}}</span>
+        <span class="info-tag">{{getPriceRange()}}</span>
+        </div>
+    </div>    
+</div>

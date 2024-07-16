@@ -1,0 +1,55 @@
+.search-bar{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media (max-width: 767px){
+    .search-bar{
+        flex-direction: column;       
+    }
+
+    mat-form-field, .button {
+        width: 100%;
+    }
+}
+
+.button{
+    background-color: #ffa0c1;
+    min-width: 6rem;
+    height: 3.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.3rem;
+    padding: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}

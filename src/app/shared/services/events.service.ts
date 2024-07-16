@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
+import { EventAPIResponse } from '../interfaces/event.interface';
 
 
 @Injectable({
@@ -18,7 +19,7 @@ export class EventsService {
 
     const { apiKey, apiUrl } = environment
 
-    return this.httpClient.get<any>(`${apiUrl}?apikey=${apiKey}&page=${page}${queryParams}`)
+    return this.httpClient.get<EventAPIResponse>(`${apiUrl}?apikey=${apiKey}&page=${page}${queryParams}`)
   }
 
   formatDate(date: Date) {

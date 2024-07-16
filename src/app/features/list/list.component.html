@@ -2,7 +2,7 @@
 <ul class="events-wrapper">
     @for (event of events; track event.id) {
         @defer (on immediate) {
-             <li>{{event.name}}</li>
+             <li><app-card [event]="event"></app-card></li>
         }
     }
 </ul>
