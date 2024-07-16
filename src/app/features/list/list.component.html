@@ -1,7 +1,9 @@
 <ul class="events-wrapper">
     @for (event of events; track event.id) {
         @defer (on immediate) {
-             <li><{{event.name}}></li>
+             <li>{{event.name}}</li>
         }
     }
 </ul>
+
+<mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageIndex]="currentPage" (page)="pageChanged($event)"></mat-paginator>
