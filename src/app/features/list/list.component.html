@@ -1,0 +1,7 @@
+<ul class="events-wrapper">
+    @for (event of events; track event.id) {
+        @defer (on immediate) {
+             <li><{{event.name}}></li>
+        }
+    }
+</ul>
