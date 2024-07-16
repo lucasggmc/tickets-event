@@ -13,18 +13,20 @@ Run `ng serve` or just `npm start` for a dev server. Navigate to `http://localho
 
 ##Comments to the reviewer
 
+I used between three and four hours.
+
 I have not used the Angular framework for a while, but with my experience using React and a little Vue, I have done a good job. I will add below what I think could be better and I am also excited to see your code suggestions.
 
 ## Further improvements
 
-1 - I would like to create a dropdown that opens to search 
-for the possible locations to make the end user experience better
-2 - Create a backend middleare to don't expose the API key
-3- Create a component for MUI pagination to separate the pagination logic from list component
-4 - Handle the errors and Create a Toaster to show the messages
-5 - Clear all filters
-6 - add a loader to let the user know what is happening
-7 - I now it's a requirement, but I could not write unit tests with the given time
+1 - I would like to create a dropdown that opens to search <br>
+for the possible locations to make the end user experience better <br>
+2 - Create a backend middleare to don't expose the API key <br>
+3- Create a component for MUI pagination to separate the pagination logic from list component <br>
+4 - Handle the errors and Create a Toaster to show the messages <br>
+5 - Clear all filters <br>
+6 - add a loader to let the user know what is happening <br>
+7 - I now it's a requirement, but I could not write unit tests with the given  time <br>
 
 ## Further help
 
