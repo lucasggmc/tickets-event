@@ -1,3 +1,4 @@
+<app-search-bar (handleSearch)="handleSearch($event)"></app-search-bar>
 <ul class="events-wrapper">
     @for (event of events; track event.id) {
         @defer (on immediate) {

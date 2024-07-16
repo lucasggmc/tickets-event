@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { EventsService } from '../../shared/services/events.service';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
+import { SearchBarComponent } from "../search-bar/search-bar.component";
+import { SearchFilter } from '../../shared/interfaces/search-filter.interface';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [MatPaginatorModule],
+  imports: [MatPaginatorModule, SearchBarComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
@@ -32,6 +34,15 @@ export class ListComponent {
       this.events = _embedded.events;
       this.totalItems = totalPages;
     });
+  }
+
+  handleSearch(searchFilter: SearchFilter) {
+    this.getEvents(
+      this.currentPage,
+      searchFilter.city,
+      searchFilter.startDate,
+      searchFilter.endDate
+    );
   }
 
 }
