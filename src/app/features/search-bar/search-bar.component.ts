@@ -4,6 +4,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SearchFilter } from '../../shared/interfaces/search-filter.interface';
+import { SearchFilterService } from '../../shared/services/search-filter.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -35,7 +36,10 @@ export class SearchBarComponent {
         endDate
       }
 
+      this.filterService.setFilter({city, startDate, endDate })
       this.handleSearch.emit(searchFilter);
     }
   }
+
+  constructor(private filterService: SearchFilterService){}
 }

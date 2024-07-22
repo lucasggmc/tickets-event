@@ -5,6 +5,7 @@ import { Event } from '../../shared/interfaces/event.interface';
 import { SearchBarComponent } from "../search-bar/search-bar.component";
 import { SearchFilter } from '../../shared/interfaces/search-filter.interface';
 import { CardComponent } from "../card/card.component";
+import { SearchFilterService } from '../../shared/services/search-filter.service';
 
 
 @Component({
@@ -24,14 +25,19 @@ export class ListComponent {
   city?: string;
   startDate: Date | undefined;
   endDate: Date | undefined;
+  filters: SearchFilter = {city: ""};
 
   ngOnInit() {
     this.getEvents();
+    this.filterService.getFilter().subscribe((filters) => {
+      this.filters = filters;
+    });
   }
 
   pageChanged(event: PageEvent) {
     this.currentPage = event.pageIndex;
-    this.getEvents(event.pageIndex, this.city, this.startDate, this.endDate);
+    // this.getEvents(event.pageIndex, this.city, this.startDate, this.endDate);
+    this.getEvents(event.pageIndex, this.filters.city, this.filters.startDate, this.filters.endDate);
   }
 
   getEvents(page?: number, searchCity?: string, startDate?: Date, endDate?: Date) {
@@ -43,12 +49,11 @@ export class ListComponent {
   }
 
   handleSearch(searchFilter: SearchFilter) {
-
     //TODO: it's sounds not the best approach to me
     //with more time I would like to make a refactor
-    this.city = searchFilter.city;
-    this.startDate = searchFilter.startDate;
-    this.endDate = searchFilter.endDate;
+    // this.city = searchFilter.city;
+    // this.startDate = searchFilter.startDate;
+    // this.endDate = searchFilter.endDate;
 
     this.getEvents(
       this.currentPage,
@@ -57,4 +62,7 @@ export class ListComponent {
       searchFilter.endDate
     );
   }
+
+  constructor(private filterService: SearchFilterService){}
+
 }
